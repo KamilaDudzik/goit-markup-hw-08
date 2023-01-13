@@ -1,0 +1,20 @@
+.what-we-do__overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.what-we-do__overlay-boxes {      
+    position: absolute;
+    width: 370px;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $backgroundTransparentGray;
+    color: $colorSecondary;
+    }

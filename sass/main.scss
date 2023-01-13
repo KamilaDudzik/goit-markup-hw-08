@@ -1,0 +1,26 @@
+@use './utils/variables' as *;
+
+@import './utils/globals';
+
+// Header and footer
+@import './components/logo';
+@import './components/page-header';
+@import './components/page-footer';
+@import './components/footer-socials';
+@import './components/newsletter';
+
+
+// Main page
+@import './components/hero';
+@import './components/paragraphs';
+@import './components/what-we-do';
+@import './components/team';
+@import './components/clients';
+
+// Modal
+@import './components/modal';
+
+// Portfolio page
+@import './components/filters';
+@import './components/portfolio';
+

@@ -1,0 +1,29 @@
+.clients__item {
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.clients__icon-link {
+
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $colorInactiveIcon;
+    color: $colorInactiveIcon;
+    border: 1px solid currentColor;
+    transition: fill $transitionKit, border $transitionKit;
+    border-radius: 4px;
+
+    &__icon {
+        color: currentColor;
+    }
+
+    &:hover, &:focus {
+        fill: $colorAccent;
+        color: $colorAccent;
+    }
+}

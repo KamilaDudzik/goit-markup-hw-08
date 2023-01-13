@@ -1,0 +1,45 @@
+
+// Main layout
+
+.footer {
+    background-color: $backgroundDark;
+    padding: 60px 0;
+
+    & address {
+        margin-top: 20px;
+        font-style: normal;
+    }
+
+    &__item:not(:last-child) {
+        margin-bottom: 9px;
+    }
+}
+.footer-logo {
+    padding-left: 0;
+}
+
+// Address
+
+.footer__social-link {
+    font-style: normal;
+    text-decoration: none;
+    line-height: 1.7;
+    transition: color $transitionKit;
+
+    &--map {
+        color: $colorSecondary;
+     }
+
+    &--gray {
+        color: $colorTransparentSecondary;
+    }
+
+    &:hover, &:focus {
+        color: $colorAccent;
+    }
+}
+
+.footer .container {
+    display: flex;
+    align-items: baseline;
+}
