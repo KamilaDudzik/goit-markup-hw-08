@@ -93,6 +93,7 @@
         height: 40px;
         width: 100%;
         transition: $transitionKit;
+        outline: none;
     }
 
     &__icon {
@@ -122,7 +123,7 @@
 
     &__policy-rules--link {
         color: $colorAccent;
-        text-decoration: under;
+        text-decoration: underline;
     }
 }
 
