@@ -1,3 +1,4 @@
+/* 
 .clients__item {
 
     &:last-child {
@@ -25,5 +26,47 @@
     &:hover, &:focus {
         fill: $colorAccent;
         color: $colorAccent;
+    }
+} 
+*/
+.clients {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.clients__item {
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.clients__icon-link {
+
+    width: 210px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: $colorInactiveIcon;
+    color: $colorInactiveIcon;
+    border: 1px solid currentColor;
+    transition: fill $transitionKit, border $transitionKit;
+    border-radius: 4px;
+
+    &__icon {
+        color: currentColor;
+    }
+
+    &:hover, &:focus {
+        fill: $colorAccent;
+        color: $colorAccent;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }

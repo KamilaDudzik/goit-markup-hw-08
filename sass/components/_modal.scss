@@ -39,9 +39,27 @@
 
     &__close-icon {
         display: block;
+        transition: $transitionKit;
     }
     
+    @media screen and (max-width: 1199px) {
+    width: 95%;
+    max-width: 450px;
+    height: 95%;
+    max-height: 609px;
+    overflow: scroll;
+    }
+    
+    @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+    }
 
+}
+
+.modal__close-button:hover .modal__close-icon,
+.modal__close-button:focus .modal__close-icon {
+    fill: $colorAccent;
 }
 
 .is-hidden {
@@ -119,6 +137,10 @@
         line-height: 1.7;
         color: $colorSmallText;
         margin-left: 8px;
+
+        @media screen and (max-width: 1199px) {
+            font-size: 12px;
+        }
     }
 
     &__policy-rules--link {
@@ -157,13 +179,18 @@
 .check__box {
   position: absolute;
   top: 3px;
-  left: 15px;
+  left: 0px;
   width: 16px;
   height: 15px;
   overflow: hidden;
   border-radius: 2px;
   background-color: $colorSecondary;
   border: 1px solid $colorMainText;
+
+  @media screen and (min-width: 1200px) {
+    top: 2px;
+    left: 15px;
+  }
 }
 
 /* Checked */

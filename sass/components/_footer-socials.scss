@@ -1,6 +1,6 @@
 @import '../utils/mixins';
 
-// Section layout
+/* // Section layout
 .footer-button {
     margin-left: 70px;
 
@@ -9,6 +9,44 @@
         font-weight: 700;
         text-transform: uppercase;
         margin-bottom: 20px;
+    }
+
+    &__list {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__link {
+    @include social-buttons;
+    transition: background-color $transitionKit;
+    background-color: $colorInactiveFooterButton;
+    box-shadow: 0px 4px 4px 0px #00000026;
+    padding: 12px; 
+
+        &:hover, &:focus {
+        background-color: $colorAccent;
+        }
+    }
+
+    &__button {
+    fill: $colorSecondary;
+    }
+}
+ */
+
+// Section layout
+.footer-button {
+    display: flex;
+    margin: 60px auto;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+
+    > p {
+        color: $colorSecondary;
+        font-weight: 700;
+        text-transform: uppercase;
     }
 
     &__list {

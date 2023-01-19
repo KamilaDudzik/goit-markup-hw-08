@@ -1,4 +1,4 @@
-
+/*
 // Main layout
 
 .header {
@@ -22,7 +22,7 @@
       gap: 0 46px;
       display: flex;
     }
-} 
+}
 
 // Is active
 
@@ -117,4 +117,210 @@
 
     color: $colorAccent;
   } 
+}
+*/
+
+@media screen and (max-width: 767px) {
+  .header__links, .header__contact {
+    display: none;
+  }
+
+  .header {
+
+    &logo {
+      padding: 16px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
+// Main layout
+.header {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid $colorLine;
+
+    &__nav {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
+}
+
+// Is active
+
+.header {
+  &__links {
+    margin-left: 83px;
+    gap: 60px;
+    display: flex;
+    justify-content: space-between;
+
+  &--nav-blue {
+    position: relative;
+  }
+
+  &--is-active {
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -34px;
+      left: 0;
+      width: 100%;
+      height: 4px;    
+      border-radius: 2px;
+      background-color: $colorAccent;
+    }
+  }
+  }
+}
+
+.header__socials.header__links--is-active {
+  color: $colorAccent;
+}
+
+// Socials
+
+.header {
+
+&__socials {
+    font-weight: 500;
+    color: $colorMainText;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    display: flex;
+    transition: $transitionKit;
+  }
+  
+    &:visited {
+    color: inherit;
+    }
+}
+
+// Contacts
+
+.header {
+
+  &__contact {
+    font-size: 12px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+  }
+
+  &__icon-box {
+    display: flex;
+  }
+  
+  &__contact-links {
+      color: $colorSmallText;
+  }
+  
+}
+
+// Icons in contacts
+
+.header__icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+
+  &:hover {
+    fill: $colorAccent;
+    color: $colorAccent;
+  }
+}
+
+// Hover and focus on socials
+
+.header__socials {
+
+  &:hover, &:focus {
+
+    color: $colorAccent;
+  } 
+}
+
+}
+
+@media screen and (min-width: 1200px) {
+.header {
+
+    &__nav {
+
+      &:not(:last-child) {
+        margin-right: 43px;
+      }
+    }
+}
+
+// Is active
+
+.header {
+  &__links {
+    margin-left: 94px;
+    margin-right: 345px;
+    gap: 0 46px;
+
+  &--is-active {
+
+    &::after {
+      content: '';
+      bottom: -33px;
+    }
+  }
+  }
+}
+// Contacts
+
+.header {
+
+  &__contact {
+    font-size: 14px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  &__icon-box {
+    display: flex;
+  }
+  
+  &__contact-links {
+      color: $colorSmallText;
+  }
+  
+}
+
+// Icons in contacts
+
+.header__icon {
+  vertical-align: middle;
+  margin-right: 10px;
+  fill: currentColor;
+
+  &:hover {
+    fill: $colorAccent;
+    color: $colorAccent;
+  }
+}
+
+// Hover and focus on socials
+
+.header__socials {
+
+  &:hover, &:focus {
+
+    color: $colorAccent;
+  } 
+}
 }

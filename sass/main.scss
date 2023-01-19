@@ -2,6 +2,10 @@
 
 @import './utils/globals';
 
+// Mobile menu
+@import './components/menu-mobile';
+@import './components/hamburger';
+
 // Header and footer
 @import './components/logo';
 @import './components/page-header';

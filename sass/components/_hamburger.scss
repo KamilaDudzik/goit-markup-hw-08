@@ -1,0 +1,17 @@
+.menu-toggle {
+    background: none;
+    padding-top: 10px;
+    padding-right: 15px;
+
+    @media screen and (min-width:748px) {
+        display: none;
+    }
+}
+
+.menu-button {
+    transition: $transitionKit;
+}
+
+.menu-toggle:hover .menu-button {
+    fill: $colorAccent;
+}

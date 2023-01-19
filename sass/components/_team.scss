@@ -1,6 +1,6 @@
 @import '../utils/mixins';
 
-// Team section layout
+/* // Team section layout
 
 .team {
   background-color: $backgroundLightGray;
@@ -39,6 +39,104 @@
     justify-content: center
   }
 }
+
+// Socials
+
+.team__social-link {
+
+  @include social-buttons;
+  fill: $colorInactiveIcon;
+  transition: fill $transitionKit, background-color $transitionKit;
+
+  &:hover, &:focus {
+    background-color: $colorAccent;
+    fill: $colorSecondary;
+  }
+
+  &__social-icon {
+    fill: currentColor;
+  }
+} */
+
+// Team section layout
+
+.team {
+  background-color: $backgroundLightGray;
+
+  &__card {
+    max-width: 450px;
+    max-height: 622px;
+    background-color: $colorSecondary;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+
+  &__box {
+    padding: 30px 0;
+  }
+
+  &__name  {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__profession {
+    @extend .team__profession;
+    font-weight: 400px;
+    color: $colorSmallText;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    text-align: center
+  }
+
+  &__socials {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__card {
+    max-width: 354px;
+    max-height: 536px;
+  }
+
+  &__profession {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    text-align: center
+  }
+
+  &__socials {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &__card {
+      max-width: 270px;
+    }
+  }
+}
+
+
 
 // Socials
 

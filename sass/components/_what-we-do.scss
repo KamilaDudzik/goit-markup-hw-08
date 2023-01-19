@@ -17,4 +17,10 @@
     justify-content: center;
     background-color: $backgroundTransparentGray;
     color: $colorSecondary;
+}
+
+.what-we-do {
+    @media screen and (max-width: 1199px) {
+        display: none;
     }
+}

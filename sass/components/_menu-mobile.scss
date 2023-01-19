@@ -1,0 +1,128 @@
+@media screen and (max-width:767px) {
+        // Main nav
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $colorSecondary;
+    width: 100%;
+    height: 100%;
+    padding: 48px 40px;
+
+    &__window {
+        transition: $transitionKit;
+    }
+
+    &__exit {
+    position: absolute;
+    top: 21px;
+    right: 25px;
+    background: none;
+    }
+
+    &__close-icon {
+        transition: $transitionKit;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 320px;
+        
+        &:not(:last-child) {
+        gap: 32px;
+        }
+    }
+
+    &__link {
+        font-size: 40px;
+        transition: $transitionKit;
+
+        &:visited {
+            color: inherit;
+        }
+
+        &:hover, &:focus {
+            color: $colorAccent;
+        }
+    }    
+}
+
+.menu__exit:hover .menu__close-icon {
+    fill: $colorAccent;
+}
+
+// Contacts 
+
+.menu {
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 64px;
+
+        &:not(:last-child) {
+            gap: 32px;
+        }
+    }
+
+    &__contacts-link {
+        color: $colorAccent;
+        font-size: 34px;
+        font-weight: 500;
+
+        &:visited {
+            color: inherit;
+        }
+        
+        &--mail {
+            font-size: 24px;
+            font-weight: 500;
+            color: $colorSmallText;
+
+            &:visited {
+                color: inherit;
+            }
+        }
+    }
+}
+
+// Socials
+.menu {
+    &__socials {
+        display: flex;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+
+    &__social-link {
+        font-size: 18px;
+        font-weight: 500;
+        color: $colorAccent;
+        padding: 0 10px;
+        border-right: 1px solid $colorInactiveIcon;
+    }
+}
+
+.menu__socials:last-child {
+    border-right: none;
+}
+
+.is-open {
+    transition: $transitionKit;
+    pointer-events: none;
+    transform: translateX(100%);
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .menu {
+        display: none;
+    }
+}
+}
+
+.is-open .menu__window {
+    transform: translateX(100%);
+}
