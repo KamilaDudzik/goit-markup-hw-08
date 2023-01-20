@@ -50,6 +50,7 @@
 
 .menu__exit:hover .menu__close-icon {
     fill: $colorAccent;
+    transform: rotate(180deg);
 }
 
 // Contacts 

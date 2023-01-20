@@ -60,6 +60,7 @@
 .modal__close-button:hover .modal__close-icon,
 .modal__close-button:focus .modal__close-icon {
     fill: $colorAccent;
+    transform: rotate(180deg);
 }
 
 .is-hidden {
@@ -77,6 +78,10 @@
         font-size: 20px;
         font-weight: 700;
         margin-bottom: 12px;
+
+        @media screen and (max-width: 1199px) {
+            line-height: 1.5;
+        }
     }    
 
     &__form {
@@ -178,7 +183,7 @@
 
 .check__box {
   position: absolute;
-  top: 3px;
+  top: 2px;
   left: 0px;
   width: 16px;
   height: 15px;
@@ -188,7 +193,7 @@
   border: 1px solid $colorMainText;
 
   @media screen and (min-width: 1200px) {
-    top: 2px;
+    top: 3px;
     left: 15px;
   }
 }
