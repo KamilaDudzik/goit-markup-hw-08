@@ -1,7 +1,7 @@
 @media screen and (max-width:767px) {
         // Main nav
 .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: $colorSecondary;
@@ -11,10 +11,13 @@
 
     &__window {
         transition: $transitionKit;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     &__exit {
-    position: absolute;
+    position: fixed;
     top: 21px;
     right: 25px;
     background: none;
@@ -27,7 +30,7 @@
     &__nav {
         display: flex;
         flex-direction: column;
-        margin-bottom: 320px;
+        margin-bottom: auto;
         
         &:not(:last-child) {
         gap: 32px;
@@ -37,20 +40,21 @@
     &__link {
         font-size: 40px;
         transition: $transitionKit;
-
-        &:visited {
-            color: inherit;
-        }
+        color: $colorMainText;
 
         &:hover, &:focus {
             color: $colorAccent;
         }
-    }    
-}
-
-.menu__exit:hover .menu__close-icon {
+    }
+    
+    .menu__exit:hover .menu__close-icon {
     fill: $colorAccent;
     transform: rotate(180deg);
+    }
+
+    .menu__link:visited {
+    color: inherit;
+    }
 }
 
 // Contacts 
@@ -91,9 +95,17 @@
 .menu {
     &__socials {
         display: flex;
+    }
 
-        &:first-child {
-            padding-left: 0;
+    &__socials-item {
+        padding-right: 10px;
+
+        &:not(:first-child) {
+            padding-left: 10px;
+        }
+
+        &:not(:last-child) {
+            border-right: 1px solid $colorInactiveIcon;
         }
     }
 
@@ -101,13 +113,7 @@
         font-size: 18px;
         font-weight: 500;
         color: $colorAccent;
-        padding: 0 10px;
-        border-right: 1px solid $colorInactiveIcon;
     }
-}
-
-.menu__socials:last-child {
-    border-right: none;
 }
 
 .is-open {
