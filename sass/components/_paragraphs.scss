@@ -81,18 +81,13 @@ padding-bottom: 0;
 
 @media screen and (min-width: 1200px) {
     .paragraphs {
-        
-        &__icon-box {
+
+        &__item {
             max-width: 270px;
         }
 
         &__list {
             flex-direction: row;
-        }
-
-        &__small-paragrahps {
-            max-width: 270px;
-            overflow: visible;
         }
     }
 
