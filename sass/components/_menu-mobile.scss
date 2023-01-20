@@ -17,14 +17,15 @@
     }
 
     &__exit {
-    position: fixed;
-    top: 21px;
-    right: 25px;
-    background: none;
+        position: absolute;
+        right: 26px;
+        top: 21px;
+        background: none;
     }
 
     &__close-icon {
         transition: $transitionKit;
+        display: block;
     }
 
     &__nav {
@@ -180,6 +181,17 @@
 
             &:nth-child(4) {
                 padding-left: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 430px) {
+    .menu {
+        &__socials-item {
+
+            &:nth-child(2) {
+                padding-right: 10px;
             }
         }
     }

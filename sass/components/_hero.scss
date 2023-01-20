@@ -44,17 +44,19 @@
 }
  */
 
-.hero-section {
+  .hero-section {
   padding: 118px 0;
   text-align: center;
   background-color: $backgroundDark;
-  background-image: linear-gradient($backgroundColorGradient, $backgroundColorGradient),
-  url('../images/backgroundimage.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
   max-width: 1600px;
   height: 400px;
+  }
+
+.hero-section {
 
   &__header {
   font-size: 26px;
@@ -101,7 +103,7 @@
     }
   }
 }
-
+/*
 .hero-section {
     @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -124,5 +126,30 @@ only screen and (min-resolution: 3dppx) {
     .hero-section {
         background-image: url('../images/backgroundimage@3x.jpg');
     }
+  }
+}
+*/
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero-section {
+    background-image: linear-gradient($backgroundColorGradient, $backgroundColorGradient),
+      url('../images/backgroundimage@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 320px) {
+    .hero-section {
+    background-position: center;
+    background-image: linear-gradient($backgroundColorGradient, $backgroundColorGradient),
+      url('../images/backgroundimage@2x.jpg');
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-position: center;
+    background-image: linear-gradient($backgroundColorGradient, $backgroundColorGradient),
+      url('../images/backgroundimage.jpg');
+    background-size: cover;
   }
 }
