@@ -69,9 +69,6 @@
         margin-bottom: 8px;
     }
 }
-.footer-logo {
-    padding-left: 0;
-}
 
 // Address
 
@@ -96,34 +93,44 @@
 
 @media screen and (min-width: 768px) {
     .footer .container {
-    display: flex;
-    align-items: baseline;
+        display: flex;
+        align-items: baseline;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .footer {
         margin-top: 0;
-    }
+        flex-direction: row;
+        flex-wrap: wrap;
+        }
+    
 }
 
 @media screen and (min-width: 1200px) {
     .footer {
-    background-color: $backgroundDark;
-    padding: 60px 0;
+        background-color: $backgroundDark;
+        padding: 60px 0;
 
-    & address {
-        font-style: normal;
-    }
+        & address {
+            font-style: normal;
+        }
 
-    &__container {
-        text-align: left;
-    }
+        &__container {
+            text-align: left;
+            align-items: flex-start;
+        }
 
-    &__item:not(:last-child) {
-        margin-bottom: 9px;
+        &__item:not(:last-child) {
+            margin-bottom: 9px;
         
+        }
     }
+
 }
+
 .footer-logo {
-    padding-left: 0;
-}
+    padding: 0;
+    padding-bottom: 16px;
 }
