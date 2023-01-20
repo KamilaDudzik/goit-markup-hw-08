@@ -136,6 +136,7 @@
   }
 }
 
+
 // Socials
 
 .team__social-link {
@@ -151,5 +152,19 @@
 
   &__social-icon {
     fill: currentColor;
+  }
+}
+
+.photo {
+  max-width: 450px;
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 340.883px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+    max-height: 260px;
   }
 }
